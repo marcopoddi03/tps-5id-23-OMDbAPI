@@ -36,7 +36,8 @@ namespace Poddi_OMDbAPI
             path = path + title;
             if (year != "")
                 path = path + "&y=" + year;
-            path=path+"&type="+type;
+            if(type!="")
+                path=path+"&type="+type;
             if (fullPlot)
                 path = path + "&plot=full";
             HttpResponseMessage response = await client.GetAsync(path);
@@ -48,13 +49,15 @@ namespace Poddi_OMDbAPI
               return product;
         }
 
-        public static async Task<MovieSearch> GetMovieSearchAsync(string title)
+        public static async Task<MovieSearch> GetMovieSearchAsync(string title, string year, string type, string page)
         {
             MovieSearch mv = null;
-            string path = "?apikey=" + apikey;
-
-            HttpResponseMessage response = await client.GetAsync("?apikey=877c8336&s=alone");
-            MessageBox.Show(response.ToString());
+            string path = "?apikey=" + apikey+"&s="+title+"&page="+page;
+            if (year != "")
+                path += "&y=" + year;
+            if (type != "Tutto")
+                path += "&type=" + type;
+            HttpResponseMessage response = await client.GetAsync(path);
             if (response.IsSuccessStatusCode)
             {
                 mv = await JsonSerializer.DeserializeAsync<MovieSearch>(await response.Content.ReadAsStreamAsync());

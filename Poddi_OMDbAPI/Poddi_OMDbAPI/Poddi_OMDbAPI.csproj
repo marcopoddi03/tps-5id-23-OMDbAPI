@@ -103,6 +103,9 @@
     <EmbeddedResource Include="FormMovie.resx">
       <DependentUpon>FormMovie.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormRicerca.resx">
+      <DependentUpon>FormRicerca.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

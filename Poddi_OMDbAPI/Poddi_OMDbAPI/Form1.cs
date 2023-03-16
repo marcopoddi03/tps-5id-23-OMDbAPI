@@ -34,7 +34,7 @@ namespace Poddi_OMDbAPI
                 txtYear.Text = "";
             if (txtTitle.Text != null)
             {
-                movie = await ClientREST.GetMovieAsync(txtTitle.Text, imdbId, txtYear.Text, "movie", checkBoxPlot.Checked);
+                movie = await ClientREST.GetMovieAsync(txtTitle.Text, imdbId, txtYear.Text, domainUpDownType.SelectedItem.ToString(), checkBoxPlot.Checked);
                 if (movie.Response == "True")
                 {
                     FormMovie fM = new FormMovie(movie);
@@ -53,22 +53,14 @@ namespace Poddi_OMDbAPI
                 txtYear.Enabled = false;
         }
 
-        private async void btnRicerca_Click(object sender, EventArgs e)
+        private void btnRicerca_Click(object sender, EventArgs e)
         {
             FormRicerca fR = new FormRicerca();
             fR.Show();
-            MovieSearch movie = null;
+        }
 
-            movie = await ClientREST.GetMovieSearchAsync(txtTitle.Text);
-            if (movie.Response == "True")
-            {
-                foreach (Movie m in movie.Search)
-                {
-                    MessageBox.Show(m.Year);
-                }
-            }
-            else
-                MessageBox.Show("Film non trovato");
+        private void label2_Click(object sender, EventArgs e)
+        {
 
         }
     }

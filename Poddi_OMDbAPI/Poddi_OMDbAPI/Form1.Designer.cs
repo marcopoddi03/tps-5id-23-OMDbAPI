@@ -136,6 +136,7 @@
             this.label2.Size = new System.Drawing.Size(263, 13);
             this.label2.TabIndex = 12;
             this.label2.Text = "Non sei sicuro dei dati da inserire? Prova la ricerca! -->";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // groupBox1
             // 
@@ -158,9 +159,9 @@
             // 
             this.btnRicerca.Location = new System.Drawing.Point(473, 304);
             this.btnRicerca.Name = "btnRicerca";
-            this.btnRicerca.Size = new System.Drawing.Size(75, 23);
+            this.btnRicerca.Size = new System.Drawing.Size(63, 23);
             this.btnRicerca.TabIndex = 14;
-            this.btnRicerca.Text = "button1";
+            this.btnRicerca.Text = "CERCA";
             this.btnRicerca.UseVisualStyleBackColor = true;
             this.btnRicerca.Click += new System.EventHandler(this.btnRicerca_Click);
             // 
