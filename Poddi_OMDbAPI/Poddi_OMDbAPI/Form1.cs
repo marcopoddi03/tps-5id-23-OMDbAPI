@@ -19,6 +19,8 @@ namespace Poddi_OMDbAPI
         {
             InitializeComponent();
             ClientREST.SetClient();
+            comboBoxTitle.SelectedIndex = 0;
+            domainUpDownType.SelectedIndex = 0;
         }
 
         private async void btnOk_Click(object sender, EventArgs e)
@@ -31,8 +33,13 @@ namespace Poddi_OMDbAPI
             if (txtTitle.Text != null)
             {
                 movie = await ClientREST.GetMovieAsync(txtTitle.Text, imdbId, txtYear.Text, "movie", checkBoxPlot.Checked);
-                FormMovie fM = new FormMovie(movie);
-                fM.Show();
+                if (movie.Response == "True")
+                {
+                    FormMovie fM = new FormMovie(movie);
+                    fM.Show();
+                }
+                else
+                    MessageBox.Show("Film non trovato");
             }
         }
     }

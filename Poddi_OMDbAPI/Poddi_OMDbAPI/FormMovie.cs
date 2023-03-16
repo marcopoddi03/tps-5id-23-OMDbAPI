@@ -22,8 +22,11 @@ namespace Poddi_OMDbAPI
         private void FormMovie_Load(object sender, EventArgs e)
         {
             pictureBox1.LoadAsync(movie.Poster);
-            richTextBox1.Text = "Titolo: "+movie.Title+"\nimdbID: "+movie.imdbID+"\nData di uscita: "+movie.Released;
-            richTextBox2.Text = movie.Awards + movie.Metascore + movie.imdbRating;
+            labelTitle.Text = movie.Title;
+            richTextBox1.Text = "imdbID: "+movie.imdbID+"\nData di uscita: "+movie.Released;
+            richTextBox2.Text = "Regista: " + movie.Director + "\nSceneggiatore: " + movie.Writer + "\nAttori: " + movie.Actors;
+            richTextBox3.Text = "Awards: "+ movie.Awards + "\nMetascore: "+ movie.Metascore +"\nimdb Rating: " +movie.imdbRating;
+            richTextBox4.Text = movie.Plot;
         }
     }
 }

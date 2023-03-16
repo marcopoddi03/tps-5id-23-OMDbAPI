@@ -35,18 +35,20 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtYear = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.domainUpDownType = new System.Windows.Forms.DomainUpDown();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtTitle
             // 
-            this.txtTitle.Location = new System.Drawing.Point(125, 72);
+            this.txtTitle.Location = new System.Drawing.Point(128, 72);
             this.txtTitle.Name = "txtTitle";
             this.txtTitle.Size = new System.Drawing.Size(143, 20);
             this.txtTitle.TabIndex = 0;
             // 
             // btnOk
             // 
-            this.btnOk.Location = new System.Drawing.Point(236, 228);
+            this.btnOk.Location = new System.Drawing.Point(239, 268);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(96, 35);
             this.btnOk.TabIndex = 2;
@@ -60,7 +62,7 @@
             this.comboBoxTitle.Items.AddRange(new object[] {
             "Titolo",
             "IMDb ID"});
-            this.comboBoxTitle.Location = new System.Drawing.Point(39, 71);
+            this.comboBoxTitle.Location = new System.Drawing.Point(42, 71);
             this.comboBoxTitle.Name = "comboBoxTitle";
             this.comboBoxTitle.Size = new System.Drawing.Size(80, 21);
             this.comboBoxTitle.TabIndex = 3;
@@ -68,18 +70,18 @@
             // checkBoxPlot
             // 
             this.checkBoxPlot.AutoSize = true;
-            this.checkBoxPlot.Location = new System.Drawing.Point(39, 184);
+            this.checkBoxPlot.Location = new System.Drawing.Point(42, 224);
             this.checkBoxPlot.Name = "checkBoxPlot";
-            this.checkBoxPlot.Size = new System.Drawing.Size(85, 17);
+            this.checkBoxPlot.Size = new System.Drawing.Size(182, 17);
             this.checkBoxPlot.TabIndex = 4;
-            this.checkBoxPlot.Text = "Trama lunga";
+            this.checkBoxPlot.Text = "Trama lunga (default trama corta)";
             this.checkBoxPlot.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(87, 22);
+            this.label1.Location = new System.Drawing.Point(108, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(160, 33);
             this.label1.TabIndex = 5;
@@ -101,11 +103,32 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Anno di uscita";
             // 
+            // domainUpDownType
+            // 
+            this.domainUpDownType.Items.Add("movie");
+            this.domainUpDownType.Items.Add("series");
+            this.domainUpDownType.Items.Add("episode");
+            this.domainUpDownType.Location = new System.Drawing.Point(125, 170);
+            this.domainUpDownType.Name = "domainUpDownType";
+            this.domainUpDownType.Size = new System.Drawing.Size(98, 20);
+            this.domainUpDownType.TabIndex = 8;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(39, 177);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(28, 13);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Tipo";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(367, 288);
+            this.ClientSize = new System.Drawing.Size(367, 349);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.domainUpDownType);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtYear);
             this.Controls.Add(this.label1);
@@ -129,6 +152,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtYear;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DomainUpDown domainUpDownType;
+        private System.Windows.Forms.Label label3;
     }
 }
 
