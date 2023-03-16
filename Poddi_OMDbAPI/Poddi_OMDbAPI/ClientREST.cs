@@ -33,7 +33,10 @@ namespace Poddi_OMDbAPI
                 path = path + "&i=";
             else
                 path = path + "&t=";
-            path = path + title+"&y="+year+"&type="+type;
+            path = path + title;
+            if (year != "")
+                path = path + "&y=" + year;
+            path=path+"&type="+type;
             if (fullPlot)
                 path = path + "&plot=full";
             HttpResponseMessage response = await client.GetAsync(path);

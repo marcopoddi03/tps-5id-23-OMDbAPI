@@ -23,7 +23,6 @@ namespace Poddi_OMDbAPI
         public string Poster { get; set; }
         public string Metascore { get; set; }
         public string imdbRating { get; set; }
-        public string imdbVotes { get; set; }
         public string imdbID { get; set; }
         public string Type { get; set; }
         public string Response { get; set; }

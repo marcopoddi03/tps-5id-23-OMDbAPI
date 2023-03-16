@@ -29,7 +29,8 @@ namespace Poddi_OMDbAPI
             bool imdbId=false;
             if (comboBoxTitle.SelectedIndex != 0)
                 imdbId = true;
-
+            if (!checkBoxAnno.Checked)
+                txtYear.Text = "";
             if (txtTitle.Text != null)
             {
                 movie = await ClientREST.GetMovieAsync(txtTitle.Text, imdbId, txtYear.Text, "movie", checkBoxPlot.Checked);
@@ -41,6 +42,14 @@ namespace Poddi_OMDbAPI
                 else
                     MessageBox.Show("Film non trovato");
             }
+        }
+
+        private void checkBoxAnno_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxAnno.Checked)
+                txtYear.Enabled = true;
+            else
+                txtYear.Enabled = false;
         }
     }
 }

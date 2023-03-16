@@ -34,9 +34,9 @@
             this.checkBoxPlot = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtYear = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.domainUpDownType = new System.Windows.Forms.DomainUpDown();
             this.label3 = new System.Windows.Forms.Label();
+            this.checkBoxAnno = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // txtTitle
@@ -48,7 +48,7 @@
             // 
             // btnOk
             // 
-            this.btnOk.Location = new System.Drawing.Point(239, 268);
+            this.btnOk.Location = new System.Drawing.Point(259, 262);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(96, 35);
             this.btnOk.TabIndex = 2;
@@ -70,7 +70,7 @@
             // checkBoxPlot
             // 
             this.checkBoxPlot.AutoSize = true;
-            this.checkBoxPlot.Location = new System.Drawing.Point(42, 224);
+            this.checkBoxPlot.Location = new System.Drawing.Point(43, 176);
             this.checkBoxPlot.Name = "checkBoxPlot";
             this.checkBoxPlot.Size = new System.Drawing.Size(182, 17);
             this.checkBoxPlot.TabIndex = 4;
@@ -81,7 +81,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(108, 21);
+            this.label1.Location = new System.Drawing.Point(102, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(160, 33);
             this.label1.TabIndex = 5;
@@ -89,26 +89,17 @@
             // 
             // txtYear
             // 
-            this.txtYear.Location = new System.Drawing.Point(125, 116);
+            this.txtYear.Location = new System.Drawing.Point(147, 114);
             this.txtYear.Name = "txtYear";
             this.txtYear.Size = new System.Drawing.Size(100, 20);
             this.txtYear.TabIndex = 6;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(39, 122);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 13);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Anno di uscita";
             // 
             // domainUpDownType
             // 
             this.domainUpDownType.Items.Add("movie");
             this.domainUpDownType.Items.Add("series");
             this.domainUpDownType.Items.Add("episode");
-            this.domainUpDownType.Location = new System.Drawing.Point(125, 170);
+            this.domainUpDownType.Location = new System.Drawing.Point(90, 226);
             this.domainUpDownType.Name = "domainUpDownType";
             this.domainUpDownType.Size = new System.Drawing.Size(98, 20);
             this.domainUpDownType.TabIndex = 8;
@@ -116,21 +107,32 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(39, 177);
+            this.label3.Location = new System.Drawing.Point(41, 226);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(28, 13);
             this.label3.TabIndex = 9;
             this.label3.Text = "Tipo";
             // 
+            // checkBoxAnno
+            // 
+            this.checkBoxAnno.AutoSize = true;
+            this.checkBoxAnno.Location = new System.Drawing.Point(42, 117);
+            this.checkBoxAnno.Name = "checkBoxAnno";
+            this.checkBoxAnno.Size = new System.Drawing.Size(99, 17);
+            this.checkBoxAnno.TabIndex = 10;
+            this.checkBoxAnno.Text = "Cerca per anno";
+            this.checkBoxAnno.UseVisualStyleBackColor = true;
+            this.checkBoxAnno.CheckedChanged += new System.EventHandler(this.checkBoxAnno_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(367, 349);
+            this.ClientSize = new System.Drawing.Size(367, 318);
+            this.Controls.Add(this.checkBoxAnno);
+            this.Controls.Add(this.txtYear);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.domainUpDownType);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtYear);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.checkBoxPlot);
             this.Controls.Add(this.comboBoxTitle);
@@ -151,9 +153,9 @@
         private System.Windows.Forms.CheckBox checkBoxPlot;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtYear;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DomainUpDown domainUpDownType;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.CheckBox checkBoxAnno;
     }
 }
 

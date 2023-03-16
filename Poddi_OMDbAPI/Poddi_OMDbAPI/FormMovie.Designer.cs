@@ -58,7 +58,7 @@
             // 
             // richTextBox2
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(463, 248);
+            this.richTextBox2.Location = new System.Drawing.Point(463, 286);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.Size = new System.Drawing.Size(217, 96);
             this.richTextBox2.TabIndex = 2;
@@ -66,7 +66,7 @@
             // 
             // richTextBox3
             // 
-            this.richTextBox3.Location = new System.Drawing.Point(463, 376);
+            this.richTextBox3.Location = new System.Drawing.Point(463, 410);
             this.richTextBox3.Name = "richTextBox3";
             this.richTextBox3.Size = new System.Drawing.Size(223, 96);
             this.richTextBox3.TabIndex = 3;
@@ -93,11 +93,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(561, 30);
+            this.label2.Location = new System.Drawing.Point(560, 48);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.Size = new System.Drawing.Size(43, 13);
             this.label2.TabIndex = 6;
-            this.label2.Text = "label2";
+            this.label2.Text = "Dettagli";
             // 
             // labelTitle
             // 
