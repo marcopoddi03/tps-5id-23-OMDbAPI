@@ -21,6 +21,7 @@ namespace Poddi_OMDbAPI
             ClientREST.SetClient();
             comboBoxTitle.SelectedIndex = 0;
             domainUpDownType.SelectedIndex = 0;
+            txtYear.Enabled = false;
         }
 
         private async void btnOk_Click(object sender, EventArgs e)
@@ -50,6 +51,25 @@ namespace Poddi_OMDbAPI
                 txtYear.Enabled = true;
             else
                 txtYear.Enabled = false;
+        }
+
+        private async void btnRicerca_Click(object sender, EventArgs e)
+        {
+            FormRicerca fR = new FormRicerca();
+            fR.Show();
+            MovieSearch movie = null;
+
+            movie = await ClientREST.GetMovieSearchAsync(txtTitle.Text);
+            if (movie.Response == "True")
+            {
+                foreach (Movie m in movie.Search)
+                {
+                    MessageBox.Show(m.Year);
+                }
+            }
+            else
+                MessageBox.Show("Film non trovato");
+
         }
     }
 }

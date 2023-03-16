@@ -87,7 +87,14 @@
     <Compile Include="FormMovie.Designer.cs">
       <DependentUpon>FormMovie.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormRicerca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRicerca.Designer.cs">
+      <DependentUpon>FormRicerca.cs</DependentUpon>
+    </Compile>
     <Compile Include="Movie.cs" />
+    <Compile Include="MovieSearch.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">

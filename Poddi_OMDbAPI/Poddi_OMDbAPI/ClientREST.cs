@@ -45,7 +45,21 @@ namespace Poddi_OMDbAPI
             {
                 product = await JsonSerializer.DeserializeAsync<Movie>(await response.Content.ReadAsStreamAsync());
             }
-            return product;
+              return product;
+        }
+
+        public static async Task<MovieSearch> GetMovieSearchAsync(string title)
+        {
+            MovieSearch mv = null;
+            string path = "?apikey=" + apikey;
+
+            HttpResponseMessage response = await client.GetAsync("?apikey=877c8336&s=alone");
+            MessageBox.Show(response.ToString());
+            if (response.IsSuccessStatusCode)
+            {
+                mv = await JsonSerializer.DeserializeAsync<MovieSearch>(await response.Content.ReadAsStreamAsync());
+            }
+            return mv;
         }
     }
 }
