@@ -172,9 +172,9 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(368, 75);
+            this.listBox1.Location = new System.Drawing.Point(365, 101);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(396, 199);
+            this.listBox1.Size = new System.Drawing.Size(396, 173);
             this.listBox1.TabIndex = 18;
             this.listBox1.DoubleClick += new System.EventHandler(this.listBox1_DoubleClick);
             // 
@@ -212,7 +212,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(525, 59);
+            this.label4.Location = new System.Drawing.Point(525, 85);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(70, 13);
             this.label4.TabIndex = 22;
@@ -221,7 +221,7 @@
             // labelRis
             // 
             this.labelRis.AutoSize = true;
-            this.labelRis.Location = new System.Drawing.Point(602, 59);
+            this.labelRis.Location = new System.Drawing.Point(602, 85);
             this.labelRis.Name = "labelRis";
             this.labelRis.Size = new System.Drawing.Size(13, 13);
             this.labelRis.TabIndex = 23;
