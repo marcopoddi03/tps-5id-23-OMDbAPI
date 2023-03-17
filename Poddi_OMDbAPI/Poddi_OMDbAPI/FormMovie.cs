@@ -17,6 +17,8 @@ namespace Poddi_OMDbAPI
         {
             InitializeComponent();
             this.movie = movie;
+            this.BackgroundImage = Image.FromFile("background.jpg");
+            this.BackgroundImageLayout = ImageLayout.Stretch;
         }
 
         private void FormMovie_Load(object sender, EventArgs e)

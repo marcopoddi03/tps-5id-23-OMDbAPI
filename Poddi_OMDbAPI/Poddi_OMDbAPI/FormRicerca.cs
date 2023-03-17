@@ -21,6 +21,8 @@ namespace Poddi_OMDbAPI
             listBox1.Enabled = false;
             btnCont.Enabled = false;
             txtAnno.Enabled = false;
+            this.BackgroundImage = Image.FromFile("background.jpg");
+            this.BackgroundImageLayout = ImageLayout.Stretch;
         }
         private async void Ricerca()
         {

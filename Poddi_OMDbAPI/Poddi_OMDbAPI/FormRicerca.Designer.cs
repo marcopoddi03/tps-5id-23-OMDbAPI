@@ -146,10 +146,10 @@
             // 
             // groupBoxP
             // 
-            this.groupBoxP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.groupBoxP.BackColor = System.Drawing.Color.Wheat;
             this.groupBoxP.Controls.Add(this.numericUpDown1);
             this.groupBoxP.Controls.Add(this.label1);
-            this.groupBoxP.Location = new System.Drawing.Point(641, 234);
+            this.groupBoxP.Location = new System.Drawing.Point(641, 280);
             this.groupBoxP.Name = "groupBoxP";
             this.groupBoxP.Size = new System.Drawing.Size(88, 85);
             this.groupBoxP.TabIndex = 16;
@@ -157,11 +157,11 @@
             // 
             // groupBoxR
             // 
-            this.groupBoxR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.groupBoxR.BackColor = System.Drawing.Color.Wheat;
             this.groupBoxR.Controls.Add(this.txtTitle);
             this.groupBoxR.Controls.Add(this.groupbox1);
             this.groupBoxR.Controls.Add(this.btnOk);
-            this.groupBoxR.Location = new System.Drawing.Point(43, 25);
+            this.groupBoxR.Location = new System.Drawing.Point(43, 71);
             this.groupBoxR.Name = "groupBoxR";
             this.groupBoxR.Size = new System.Drawing.Size(284, 203);
             this.groupBoxR.TabIndex = 17;
@@ -170,7 +170,7 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(368, 29);
+            this.listBox1.Location = new System.Drawing.Point(368, 75);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(361, 199);
             this.listBox1.TabIndex = 18;
@@ -179,7 +179,8 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(378, 256);
+            this.label3.BackColor = System.Drawing.Color.Wheat;
+            this.label3.Location = new System.Drawing.Point(378, 302);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(247, 13);
             this.label3.TabIndex = 19;
@@ -187,7 +188,7 @@
             // 
             // btnCont
             // 
-            this.btnCont.Location = new System.Drawing.Point(123, 266);
+            this.btnCont.Location = new System.Drawing.Point(123, 312);
             this.btnCont.Name = "btnCont";
             this.btnCont.Size = new System.Drawing.Size(136, 35);
             this.btnCont.TabIndex = 16;
@@ -198,19 +199,20 @@
             // checkBoxPlot
             // 
             this.checkBoxPlot.AutoSize = true;
-            this.checkBoxPlot.Location = new System.Drawing.Point(413, 284);
+            this.checkBoxPlot.BackColor = System.Drawing.Color.Wheat;
+            this.checkBoxPlot.Location = new System.Drawing.Point(413, 330);
             this.checkBoxPlot.Name = "checkBoxPlot";
             this.checkBoxPlot.Size = new System.Drawing.Size(182, 17);
             this.checkBoxPlot.TabIndex = 21;
             this.checkBoxPlot.Text = "Trama lunga (default trama corta)";
-            this.checkBoxPlot.UseVisualStyleBackColor = true;
+            this.checkBoxPlot.UseVisualStyleBackColor = false;
             // 
             // FormRicerca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(776, 333);
+            this.BackColor = System.Drawing.Color.Wheat;
+            this.ClientSize = new System.Drawing.Size(776, 430);
             this.Controls.Add(this.checkBoxPlot);
             this.Controls.Add(this.btnCont);
             this.Controls.Add(this.label3);

@@ -22,6 +22,8 @@ namespace Poddi_OMDbAPI
             comboBoxTitle.SelectedIndex = 0;
             domainUpDownType.SelectedIndex = 0;
             txtYear.Enabled = false;
+            this.BackgroundImage = Image.FromFile("background.jpg");
+            this.BackgroundImageLayout= ImageLayout.Stretch;
         }
 
         private async void btnOk_Click(object sender, EventArgs e)

@@ -86,8 +86,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(201, 20);
+            this.label1.Location = new System.Drawing.Point(202, 54);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(161, 33);
             this.label1.TabIndex = 5;
@@ -141,7 +142,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.groupBox1.BackColor = System.Drawing.Color.Wheat;
             this.groupBox1.Controls.Add(this.comboBoxTitle);
             this.groupBox1.Controls.Add(this.txtTitle);
             this.groupBox1.Controls.Add(this.btnOk);
@@ -150,7 +151,7 @@
             this.groupBox1.Controls.Add(this.txtYear);
             this.groupBox1.Controls.Add(this.domainUpDownType);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(23, 80);
+            this.groupBox1.Location = new System.Drawing.Point(26, 100);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(513, 151);
             this.groupBox1.TabIndex = 13;
@@ -169,10 +170,10 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.groupBox2.BackColor = System.Drawing.Color.Wheat;
             this.groupBox2.Controls.Add(this.btnRicerca);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Location = new System.Drawing.Point(143, 252);
+            this.groupBox2.Location = new System.Drawing.Point(146, 272);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(393, 61);
             this.groupBox2.TabIndex = 15;
@@ -184,7 +185,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(564, 346);
+            this.ClientSize = new System.Drawing.Size(564, 402);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
