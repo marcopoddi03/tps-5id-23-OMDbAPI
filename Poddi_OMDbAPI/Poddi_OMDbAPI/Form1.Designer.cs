@@ -40,7 +40,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnRicerca = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtTitle
@@ -52,7 +54,7 @@
             // 
             // btnOk
             // 
-            this.btnOk.Location = new System.Drawing.Point(218, 109);
+            this.btnOk.Location = new System.Drawing.Point(420, 110);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(75, 26);
             this.btnOk.TabIndex = 2;
@@ -131,15 +133,15 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(204, 309);
+            this.label2.Location = new System.Drawing.Point(27, 24);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(263, 13);
             this.label2.TabIndex = 12;
             this.label2.Text = "Non sei sicuro dei dati da inserire? Prova la ricerca! -->";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.groupBox1.Controls.Add(this.comboBoxTitle);
             this.groupBox1.Controls.Add(this.txtTitle);
             this.groupBox1.Controls.Add(this.btnOk);
@@ -157,7 +159,7 @@
             // 
             // btnRicerca
             // 
-            this.btnRicerca.Location = new System.Drawing.Point(473, 304);
+            this.btnRicerca.Location = new System.Drawing.Point(300, 19);
             this.btnRicerca.Name = "btnRicerca";
             this.btnRicerca.Size = new System.Drawing.Size(63, 23);
             this.btnRicerca.TabIndex = 14;
@@ -165,19 +167,33 @@
             this.btnRicerca.UseVisualStyleBackColor = true;
             this.btnRicerca.Click += new System.EventHandler(this.btnRicerca_Click);
             // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.groupBox2.Controls.Add(this.btnRicerca);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Location = new System.Drawing.Point(143, 252);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(393, 61);
+            this.groupBox2.TabIndex = 15;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "RICERCA";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(564, 346);
-            this.Controls.Add(this.btnRicerca);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -197,6 +213,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnRicerca;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }
 

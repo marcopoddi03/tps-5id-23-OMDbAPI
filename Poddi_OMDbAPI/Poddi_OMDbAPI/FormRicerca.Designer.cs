@@ -42,6 +42,7 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnCont = new System.Windows.Forms.Button();
+            this.checkBoxPlot = new System.Windows.Forms.CheckBox();
             this.groupbox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.groupBoxP.SuspendLayout();
@@ -58,16 +59,17 @@
             // checkBoxAnno
             // 
             this.checkBoxAnno.AutoSize = true;
-            this.checkBoxAnno.Location = new System.Drawing.Point(29, 31);
+            this.checkBoxAnno.Location = new System.Drawing.Point(29, 65);
             this.checkBoxAnno.Name = "checkBoxAnno";
             this.checkBoxAnno.Size = new System.Drawing.Size(51, 17);
             this.checkBoxAnno.TabIndex = 1;
             this.checkBoxAnno.Text = "Anno";
             this.checkBoxAnno.UseVisualStyleBackColor = true;
+            this.checkBoxAnno.CheckedChanged += new System.EventHandler(this.checkBoxAnno_CheckedChanged);
             // 
             // txtAnno
             // 
-            this.txtAnno.Location = new System.Drawing.Point(105, 31);
+            this.txtAnno.Location = new System.Drawing.Point(95, 65);
             this.txtAnno.Name = "txtAnno";
             this.txtAnno.Size = new System.Drawing.Size(100, 20);
             this.txtAnno.TabIndex = 3;
@@ -78,7 +80,7 @@
             this.domainUpDownType.Items.Add("movie");
             this.domainUpDownType.Items.Add("series");
             this.domainUpDownType.Items.Add("episode");
-            this.domainUpDownType.Location = new System.Drawing.Point(105, 57);
+            this.domainUpDownType.Location = new System.Drawing.Point(95, 29);
             this.domainUpDownType.Name = "domainUpDownType";
             this.domainUpDownType.Size = new System.Drawing.Size(98, 20);
             this.domainUpDownType.TabIndex = 10;
@@ -99,7 +101,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(43, 59);
+            this.label2.Location = new System.Drawing.Point(42, 31);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(28, 13);
             this.label2.TabIndex = 11;
@@ -144,9 +146,10 @@
             // 
             // groupBoxP
             // 
+            this.groupBoxP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.groupBoxP.Controls.Add(this.numericUpDown1);
             this.groupBoxP.Controls.Add(this.label1);
-            this.groupBoxP.Location = new System.Drawing.Point(668, 130);
+            this.groupBoxP.Location = new System.Drawing.Point(641, 234);
             this.groupBoxP.Name = "groupBoxP";
             this.groupBoxP.Size = new System.Drawing.Size(88, 85);
             this.groupBoxP.TabIndex = 16;
@@ -154,10 +157,11 @@
             // 
             // groupBoxR
             // 
+            this.groupBoxR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.groupBoxR.Controls.Add(this.txtTitle);
             this.groupBoxR.Controls.Add(this.groupbox1);
             this.groupBoxR.Controls.Add(this.btnOk);
-            this.groupBoxR.Location = new System.Drawing.Point(43, 12);
+            this.groupBoxR.Location = new System.Drawing.Point(43, 25);
             this.groupBoxR.Name = "groupBoxR";
             this.groupBoxR.Size = new System.Drawing.Size(284, 203);
             this.groupBoxR.TabIndex = 17;
@@ -166,16 +170,16 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(368, 16);
+            this.listBox1.Location = new System.Drawing.Point(368, 29);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(279, 199);
+            this.listBox1.Size = new System.Drawing.Size(361, 199);
             this.listBox1.TabIndex = 18;
             this.listBox1.DoubleClick += new System.EventHandler(this.listBox1_DoubleClick);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(381, 228);
+            this.label3.Location = new System.Drawing.Point(378, 256);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(247, 13);
             this.label3.TabIndex = 19;
@@ -183,19 +187,31 @@
             // 
             // btnCont
             // 
-            this.btnCont.Location = new System.Drawing.Point(102, 228);
+            this.btnCont.Location = new System.Drawing.Point(123, 266);
             this.btnCont.Name = "btnCont";
-            this.btnCont.Size = new System.Drawing.Size(141, 36);
+            this.btnCont.Size = new System.Drawing.Size(136, 35);
             this.btnCont.TabIndex = 16;
             this.btnCont.Text = "FAI UN\'ALTRA RICERCA";
             this.btnCont.UseVisualStyleBackColor = true;
             this.btnCont.Click += new System.EventHandler(this.btnCont_Click);
             // 
+            // checkBoxPlot
+            // 
+            this.checkBoxPlot.AutoSize = true;
+            this.checkBoxPlot.Location = new System.Drawing.Point(413, 284);
+            this.checkBoxPlot.Name = "checkBoxPlot";
+            this.checkBoxPlot.Size = new System.Drawing.Size(182, 17);
+            this.checkBoxPlot.TabIndex = 21;
+            this.checkBoxPlot.Text = "Trama lunga (default trama corta)";
+            this.checkBoxPlot.UseVisualStyleBackColor = true;
+            // 
             // FormRicerca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(801, 276);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.ClientSize = new System.Drawing.Size(776, 333);
+            this.Controls.Add(this.checkBoxPlot);
             this.Controls.Add(this.btnCont);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.listBox1);
@@ -231,5 +247,6 @@
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnCont;
+        private System.Windows.Forms.CheckBox checkBoxPlot;
     }
 }

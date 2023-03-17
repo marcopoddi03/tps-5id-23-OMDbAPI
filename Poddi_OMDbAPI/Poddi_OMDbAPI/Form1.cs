@@ -58,10 +58,5 @@ namespace Poddi_OMDbAPI
             FormRicerca fR = new FormRicerca();
             fR.Show();
         }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

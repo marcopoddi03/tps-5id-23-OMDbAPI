@@ -26,6 +26,7 @@ namespace Poddi_OMDbAPI
             richTextBox1.Text = "imdbID: "+movie.imdbID+"\nTipo: "+movie.Type+"\nData di uscita: "+movie.Released+"\nDurata: "+movie.Runtime+"\nGenere: "+movie.Genre+"\nPaese: "+movie.Country+"\nLingua: "+movie.Language+"\nRated: "+movie.Rated;
             richTextBox2.Text = "Regista: " + movie.Director + "\nSceneggiatore: " + movie.Writer + "\nAttori: " + movie.Actors;
             richTextBox3.Text = "Awards: "+ movie.Awards + "\nMetascore: "+ movie.Metascore +"\nimdb Rating: " +movie.imdbRating;
+            richTextBox4.Text = movie.Plot;
         }
     }
 }
