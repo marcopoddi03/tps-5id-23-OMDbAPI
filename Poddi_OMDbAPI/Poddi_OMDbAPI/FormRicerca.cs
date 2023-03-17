@@ -37,10 +37,12 @@ namespace Poddi_OMDbAPI
                     listBox1.Items.Add(m.imdbID + ", " + m.Title + ", " + m.Year + ", " + m.Type);
 
                 }
+                labelRis.Text = movieS.totalResults;
             }
             else
             {
                 MessageBox.Show("Nessun film trovato");
+                labelRis.Text = "0";
                 btnCont_Click(new object(), new EventArgs());
             }
                 
@@ -64,7 +66,6 @@ namespace Poddi_OMDbAPI
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
-            listBox1.DataSource = null;
             listBox1.Items.Clear();
             if(groupBoxP.Enabled)
                 Ricerca();
@@ -84,7 +85,8 @@ namespace Poddi_OMDbAPI
         }
 
         private void btnCont_Click(object sender, EventArgs e)
-        {      
+        {
+            labelRis.Text = "0";
             groupBoxP.Enabled = false;
             groupBoxR.Enabled = true;
             listBox1.Enabled = false;

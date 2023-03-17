@@ -1,11 +1,8 @@
 ﻿using System;
+using System.Threading.Tasks;
 using System.Net.Http.Headers;
 using System.Net.Http;
-using System.Data;
-using System.Net;
-using System.Text;
 using System.Text.Json;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Poddi_OMDbAPI
@@ -51,7 +48,7 @@ namespace Poddi_OMDbAPI
         public static async Task<MovieSearch> GetMovieSearchAsync(string title, string year, string type, string page)
         {
             MovieSearch mv = null;
-            string path = path_apikey+"&s="+title+"&page="+page;
+            string path = path_apikey+"&s="+title.Replace(' ', '+')+ "&page="+page;
             if (year != "")
                 path += "&y=" + year;
             if (type != "Tutto")

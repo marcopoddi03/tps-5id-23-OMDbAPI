@@ -43,6 +43,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnCont = new System.Windows.Forms.Button();
             this.checkBoxPlot = new System.Windows.Forms.CheckBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.labelRis = new System.Windows.Forms.Label();
             this.groupbox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.groupBoxP.SuspendLayout();
@@ -172,7 +174,7 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(368, 75);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(361, 199);
+            this.listBox1.Size = new System.Drawing.Size(396, 199);
             this.listBox1.TabIndex = 18;
             this.listBox1.DoubleClick += new System.EventHandler(this.listBox1_DoubleClick);
             // 
@@ -207,12 +209,32 @@
             this.checkBoxPlot.Text = "Trama lunga (default trama corta)";
             this.checkBoxPlot.UseVisualStyleBackColor = false;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(525, 59);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(70, 13);
+            this.label4.TabIndex = 22;
+            this.label4.Text = "Risutati totali:";
+            // 
+            // labelRis
+            // 
+            this.labelRis.AutoSize = true;
+            this.labelRis.Location = new System.Drawing.Point(602, 59);
+            this.labelRis.Name = "labelRis";
+            this.labelRis.Size = new System.Drawing.Size(13, 13);
+            this.labelRis.TabIndex = 23;
+            this.labelRis.Text = "0";
+            // 
             // FormRicerca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Wheat;
-            this.ClientSize = new System.Drawing.Size(776, 430);
+            this.ClientSize = new System.Drawing.Size(796, 430);
+            this.Controls.Add(this.labelRis);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.checkBoxPlot);
             this.Controls.Add(this.btnCont);
             this.Controls.Add(this.label3);
@@ -250,5 +272,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnCont;
         private System.Windows.Forms.CheckBox checkBoxPlot;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelRis;
     }
 }
