@@ -34,7 +34,6 @@ namespace Poddi_OMDbAPI
             else
                 path = path + "&t=";
             path = path + title.Replace(' ','+');
-            MessageBox.Show(path);
             if (year != "")
                 path = path + "&y=" + year;
             if(type!="")

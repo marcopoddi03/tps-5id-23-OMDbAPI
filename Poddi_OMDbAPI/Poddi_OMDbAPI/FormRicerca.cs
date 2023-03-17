@@ -45,7 +45,10 @@ namespace Poddi_OMDbAPI
         }
         private void btnOk_Click(object sender, EventArgs e)
         {
-            if(txtTitle!=null)
+            bool correctYear = true;
+            if (checkBoxAnno.Checked && !int.TryParse(txtAnno.Text, out int n))
+                correctYear = false;
+            if (!string.IsNullOrWhiteSpace(txtTitle.Text) && correctYear)
             {
                 btnCont.Enabled = true;
                 listBox1.Enabled = true;
@@ -54,12 +57,15 @@ namespace Poddi_OMDbAPI
                 Ricerca();
             }
             else
-               MessageBox.Show("Inserisci il titolo");
+               MessageBox.Show("Inserisci dati validi!");
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
-            Ricerca();
+            listBox1.DataSource = null;
+            listBox1.Items.Clear();
+            if(groupBoxP.Enabled)
+                Ricerca();
         }
 
         private async void listBox1_DoubleClick(object sender, EventArgs e)
@@ -76,12 +82,13 @@ namespace Poddi_OMDbAPI
         }
 
         private void btnCont_Click(object sender, EventArgs e)
-        {
-            numericUpDown1.Value = 1;
+        {      
             groupBoxP.Enabled = false;
             groupBoxR.Enabled = true;
             listBox1.Enabled = false;
             btnCont.Enabled = false;
+            listBox1.Items.Clear();
+            numericUpDown1.Value = 1;
         }
 
         private void checkBoxAnno_CheckedChanged(object sender, EventArgs e)
